@@ -1,59 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="css/tributeToSteve.css" rel="stylesheet" type="text/css"/>
+<head>
+  <title>LOREM IPSUM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 
+</head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-<div class="container">
-	<div class="jumbotron">
-		<div class="row">
-			<div class="col-xs-12">
-				<h1 class="text-center">Steve Jobs</h1>
-				<h2 class="text-center"><em>A visionary inspiring the greatest disruptions in technology</em></h2>
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
 
-				<div class="thumbnail"><img src="img/stevemac.png">
-					<div class="caption text-center">Steve Jobs and the Macintosh </div>
-				</div>
+    // Prevent default anchor click behavior
+    event.preventDefault();
 
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-					<h3>Here's a list what Steve has done for the world:</h3>
+    // Store hash
+    var hash = this.hash;
 
-					<ul>
-						<li><strong>1976</strong> - The Apple I was introduced by Steve Jobs alongside engineer Steve Wozniak. The Apple I appealed to hobbyists back in the day who had a nack for tinkering.</li>
-						<li><strong>1977</strong> - The Apple II hit the jackpot for Apple with its VisiCalc software and new design. Hobbyists still enjoyed the Apple II as it still allowed expandability.</li>
-						<li><strong>1984</strong> - The Macintosh was the first personal computer to integrate a mouse with a graphical user interface. It was launched with a massive media campaign with a two-minute long TV commercial.</li>
-						<li><strong>1984</strong> - The Apple IIC was launched only a few months after the Macintosh with an intention to creep into midde-class households with its small form factor.</li>
-						<li><strong>1986</strong> - Pixar Animation was one of Steve's love child as it truly demonstrated how art can be infused with technology. Their first blockbuster was Toy Story launched in 1995.</li>
-						<li><strong>1988</strong> - NeXT launched a famous computer with an austere black cube. Steve pushed his engineers toward boundaries never ventured experimenting on various designs with hardware.</li>
-						<li><strong>1998</strong> - The iMac with its candy coloured case marked the return of the revolutionary all-in-one design first introduced by the original Macintosh in 1976.</li>
-						<li><strong>2000</strong> - The Power Mac G4 Cube was Apple's own version of a cubed computer. Steve continuously encouraged Jony Ive to work the cube into the Power Mac's lineup.</li>
-						<li><strong>2001</strong> - The iPod was... as I am sure you have already experienced, this device truly marked a break through in usability with its industry revolutionary click wheel. Anyone would be able to use it without an instructions manual.</li>
-						<li><strong>2001</strong> - Mac OS X was developed off the blueprints of the Unix-based OS developed at NeXT when NeXT was sold to Apple.</li>
-						<li><strong>2001</strong> - The Apple Store took traditional retail computer sales and gave it steroids. Apple's flagship stores changed the way computer sales were done with its iconic building architecture and minimal interior design.</li>
-						<li><strong>2003</strong> - The iTunes Store was Steve's vision to turn the PC into a lifestyle device enabling seemless collection of media such as movies and songs. The record industry folded when the iTunes Store arrived.</li>
-						<li><strong>2006</strong> - Intel Macbooks took over the previous PowerPC processors as engineers felt that the PowerPC architecture had hit a ceiling. Sales soared as Apple laptops could finally compete with their Windows counterpart (they could even run Windows).</li>
-						<li><strong>2007</strong> - iPhone debuted at MacWorld 2007 where Jobs said three things. A widescreen iPod with touch controls, a mobile phone, and a internet communications device. 'Nuff said.</li>
-						<li><strong>2008</strong> - App Store, iPhone SDK came along after the iPhone took flight and developeres were able to get their apps distributed in a clean and centralised model.</li>
-						<li><strong>2008</strong> - The Macbook Air was the world's thinnest notebook.</li>
-						<li><strong>2010</strong> - The iPad. The large device we all wanted Apple to create but didn't know how to fit in our lives (pockets and bags). </li>
-					</ul>
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
 
-					<blockquote><p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-</p>
-						<footer><cite>Steve Jobs</cite></footer>
-					</blockquote>
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
 
-					<h3>If you do have some time, do check out <a rel="nofollow" rel="noreferrer"href="https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537">Walter Isaacson's Steve Jobs</a>.</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="text-center">
-	<hr>
-		<p>Written and coded by <a rel="nofollow" rel="noreferrer"href="https://www.instagram.com/nchlsch/">nchlsch</a></p>
-	</footer>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">nash logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#myPage">HOME</a></li>
+          <li><a href="#wwd">WHAT WE DO</a></li>
+          <li><a href="#workshops">WORKSHOPS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">MERCHANDISE</a></li>
+              <li><a href="#">EXTRAS</a></li>
+              <li><a href="#">MEDIA</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+  <div class="item active">
+    <img src="img/land.jpg" alt="kids3">
+    <div class="carousel-caption">
+      <h3>Lorem</h3>
+      <p>Lorem ipsim dolor sit amet</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="img/land.jpg" alt="kids3">
+    <div class="carousel-caption">
+      <h3>Lorem</h3>
+      <p>Lorem ipsim dolor sit amet</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="img/land.jpg" alt="kids3">
+    <div class="carousel-caption">
+      <h3>Lorem</h3>
+      <p>Lorem ipsim dolor sit amet</p>
+    </div>
+  </div>
 </div>
 
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <span class="sr-only">Next</<span>
+</a>
+</div>
+
+
+<div id="wwd" class="container text-center">
+  <h3>LOREM IPSUM</h3>
+  <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</em></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+  <p class="text-center"><strong>Name</strong></p><br>
+  <a href="#demo" data-toggle="collapse">
+    <img src="img/partner.jpg" class="img-circle person" alt="Random Name">
+  </a>
+  <div id="demo" class="collapse">
+    <p>Mr. TCH</p>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+  </div>
+  <div class="col-sm-6">
+  <p class="text-center"><strong>Name</strong></p><br>
+  <a href="#demo2" data-toggle="collapse">
+    <img src="img/partner.jpg" class="img-circle person" alt="Random Name">
+  </a>
+  <div id="demo2" class="collapse">
+    <p>Mr. CES</p>
+    <p>Lorem ipsum dolor sit amet</p>
+  </div>
+  </div>
+</div>
+</div>
+
+<div id="workshops" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">WORKSHOPS</h3>
+    <p class="text-center">Lorem ipsum.<br>Lorem ipsum!</p>
+
+    <ul class="list-group">
+      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">November <span class="badge">3</span></li>
+    </ul>
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/workshop.png" alt="Paris" width="400" height="300">
+          <p><strong>Finance 101</strong></p>
+          <p>Fri. 27 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/workshop.png" alt="New York" width="400" height="300">
+          <p><strong>Finance 102</strong></p>
+          <p>Sat. 28 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/workshop.png" alt="San Francisco" width="400" height="300">
+          <p><strong>Finance 103</strong></p>
+          <p>Sun. 29 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<!-- <style>
+/* Add a dark gray background colour to the modal header and center text */
+.modal-header, h4, .close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header, .modal-body {
+  padding: 40px 50px;
+}
+</style> -->
+
+<!-- Used to open the modal -->
+<!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+            <input type="number" class="form-control" id="psw" placeholder="How many?">
+          </div>
+          <div class="form-group">
+            <label for="username"><span class="glyphicon glyphicon-user"></span> Sent To</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter email">
+          </div>
+          <button type="submit" class="btn btn-block">Pay <span class="glyphicon glyphicon-ok"></span></button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p><a href="#">Need Help?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<div id="contact" class="container">
+
+  <h3 class="text-center">CONTACT</h3>
+  <p class="text-center"><em>Enquiries? Ask away!</em></p>
+  <div class="row test">
+    <div class="col-md-4">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Singapore</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Phone: +65 </p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: mail@nash.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form group">
+          <input class="form-control" id="name" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <br><button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 id="reviews" class="text-center">REVIEWS</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Junior Savings Secondary School</a></li>
+    <li><a data-toggle="tab" href="#menu1">Seng Li Primary School</a></li>
+    <li><a data-toggle="tab" href="#menu2">St. Hello Primary School</a></li>
+  </ul>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h2>Mr. Tay Yeow Seng, Principal</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h2>Mr. Han Kee Yong, Vice Principal</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h2>Mr. Tan Teow Wee, Educator</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+    </div>
+<br>
+<br>
+
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap"></div>
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(1.369457, 103.808631);
+  var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB98JDGKNnI22TAB7H-_iY1BRMcuXB9qc&callback=myMap"></script>
+
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p><em>Nash Academy Pte. Ltd. 2017</em><a href="#" data-toggle="tooltip" title="Visit w3schools"></a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
+
+
+
+</body>
 </html>
